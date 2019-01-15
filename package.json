@@ -1,0 +1,52 @@
+{
+  "name": "bbcode-tags",
+  "version": "1.0.0",
+  "description": "Basic BBCode start and end tag creation.",
+  "keywords": [
+    "BBCode",
+    "BB",
+    "bulletin",
+    "board",
+    "markup",
+    "tags"
+  ],
+  "author": {
+    "name": "Simon Alling",
+    "email": "alling.simon@gmail.com",
+    "url": "https://simonalling.se"
+  },
+  "license": "MIT",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc -d -p . && npm run rename && tsc --module CommonJS -p .",
+    "clean": "rm -rf dist/*",
+    "lint": "tslint --project .",
+    "prepublishOnly": "npm run verify",
+    "rename": "renamer --force --find \"/\\.js$/\" --replace \".mjs\" \"dist/**\"",
+    "test": "jest",
+    "verify": "npm run lint && npm run build && npm test"
+  },
+  "sideEffects": false,
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": ".+\\.test\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.3",
+    "renamer": "^1.1.1",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  }
+}

@@ -1,0 +1,6 @@
+dist/
+src/
+tsconfig.json
+tslint.json
+*.test.ts
+*.tar.gz

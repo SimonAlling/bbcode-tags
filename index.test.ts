@@ -1,4 +1,4 @@
-import * as BB from "./";
+import * as BB from "./src/index";
 
 it("can create a simple start tag", () => {
   expect(BB.start("i")).toBe(`[i]`);

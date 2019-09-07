@@ -1,7 +1,7 @@
 {
   "name": "bbcode-tags",
-  "version": "1.0.0",
-  "description": "Basic BBCode start and end tag creation.",
+  "version": "1.1.0",
+  "description": "Basic BBCode tag creation.",
   "keywords": [
     "BBCode",
     "BB",
